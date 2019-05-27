@@ -21,12 +21,18 @@ import javazoom.jl.player.advanced.AdvancedPlayer;
  *   Right click your project and add it as a JAR (Under Java Build Path > Libraries).*/
 
 public class Jukebox implements Runnable {
+Song s1;
+Song s2;
+Song s3;
 
     public void run() {
 
 		// 1. Find an mp3 on your computer or on the Internet.
+    	s1 = new Song("The Screaming Sheep (Original Upload).mp3");
+    	s2 = new Song ("Screaming Armadillo (2).mp3");
+    	s3 = new Song ("")
 		// 2. Create a Song object for that mp3
-
+    	
 		// 3. Play the Song
 
 		/*
