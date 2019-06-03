@@ -36,7 +36,7 @@ JButton rightButton = new JButton();
 JButton middleButton = new JButton();
 JFrame frame = new JFrame();
 JPanel panel = new JPanel();
-
+Jukebox(){run();}
     public void run() {
 
 		// 1. Find an mp3 on your computer or on the Internet.
@@ -76,15 +76,6 @@ frame.setTitle("choose a screaming animal");
     	public static void main(String[] args) {
     		new Jukebox().run();
     	}
-    	
-
-    	
-    	
-    	
-    	
-    	
-    
-    
     
 	/* Use this method to add album covers to your Panel. */
 	private JLabel loadImage(String fileName) {
@@ -103,15 +94,15 @@ frame.setTitle("choose a screaming animal");
 			s3.stop();
 			s1.play();
 			}
-		if(buttonPressed == middleButton) {
-			s1.stop();
-			s3.stop();
-			s2.play();
-		}
-		if(buttonPressed == rightButton);{
+		if(buttonPressed == middleButton){
 			s1.stop();
 			s2.stop();
 			s3.play();
+		}
+		if(buttonPressed == rightButton){
+			s1.stop();
+			s3.stop();
+			s2.play();
 		}
 	}
 
@@ -173,7 +164,7 @@ class Song {
 
 	private void loadPlayer() {
 		try {
-			this.mp3Player = new AdvancedPlayer(songStream);
+	 		this.mp3Player = new AdvancedPlayer(songStream);
 		} catch (Exception e) {
 		}
 	}
